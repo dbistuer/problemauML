@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_5vTfsBjREem9KsT0bU94gw" name="ModelitzarUML">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_58F-gBjREem9KsT0bU94gw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Ag5vUBjSEem9KsT0bU94gw" name="Cliente">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OhulgB5TEemeuIzZq1IQFA" name="nom" visibility="private" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_P6JxAB5TEemeuIzZq1IQFA" name="idClient">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WFR2gB5TEemeuIzZq1IQFA" name="comandes" type="_DxtYwBjSEem9KsT0bU94gw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZgSk0B5TEemeuIzZq1IQFA" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_BHvF0BjSEem9KsT0bU94gw" name="Linea Pedido">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_o1fCoB5SEemeuIzZq1IQFA" name="productes" visibility="private" type="_BUNbkBjSEem9KsT0bU94gw" isUnique="false">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DHU-wB5TEemeuIzZq1IQFA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DHfW0B5TEemeuIzZq1IQFA" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_o1gQwB5SEemeuIzZq1IQFA" name="codi" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_BUNbkBjSEem9KsT0bU94gw" name="Producto">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F5zi4B5SEemeuIzZq1IQFA" name="idProducte" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Y5PBUB5SEemeuIzZq1IQFA" name="nom" visibility="private" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ip6RMB5SEemeuIzZq1IQFA" name="preu">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_gHJHkB5UEemeuIzZq1IQFA" name="getidProducte"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_BqnJYBjSEem9KsT0bU94gw" name="Contrato">
+      <generalization xmi:type="uml:Generalization" xmi:id="_CtcC4BjTEem9KsT0bU94gw" general="_EpbD4BjSEem9KsT0bU94gw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_KXKicBjVEem9KsT0bU94gw" name="lineaCredito" visibility="package" isUnique="false" aggregation="composite">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_B8GiABjSEem9KsT0bU94gw" name="Cliente Corporativo">
+      <generalization xmi:type="uml:Generalization" xmi:id="_lk6_IBjTEem9KsT0bU94gw" general="_Ag5vUBjSEem9KsT0bU94gw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_muLicB5TEemeuIzZq1IQFA" name="idCCorporatiu" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_CnoLQBjSEem9KsT0bU94gw" name="Cliente Personal">
+      <generalization xmi:type="uml:Generalization" xmi:id="_kQgw8BjTEem9KsT0bU94gw" general="_Ag5vUBjSEem9KsT0bU94gw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_eMX5cB5TEemeuIzZq1IQFA" name="idCPersonal" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_DxtYwBjSEem9KsT0bU94gw" name="Pedido">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_HbjNAB5TEemeuIzZq1IQFA" name="idPedido" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_HblpQB5TEemeuIzZq1IQFA" name="productes" visibility="private" type="_BUNbkBjSEem9KsT0bU94gw" isUnique="false">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HblpQR5TEemeuIzZq1IQFA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HblpQh5TEemeuIzZq1IQFA" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_EBXlYBjSEem9KsT0bU94gw" name="Vendedor">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_umXmsB5TEemeuIzZq1IQFA" name="idVenedor" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wRXI4B5TEemeuIzZq1IQFA" name="nom" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_xde9wB5TEemeuIzZq1IQFA" name="vendes" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ERSQsBjSEem9KsT0bU94gw" name="Targeta Crédito">
+      <generalization xmi:type="uml:Generalization" xmi:id="_G1hSkBjTEem9KsT0bU94gw" general="_EpbD4BjSEem9KsT0bU94gw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-thQcB5TEemeuIzZq1IQFA" name="lineaCredito" visibility="private" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_EpbD4BjSEem9KsT0bU94gw" name="Sistema de Pago">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_LIjjIBjVEem9KsT0bU94gw" name="consultarSaldo" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_sp3eABjSEem9KsT0bU94gw" name="realitza" memberEnd="_sp4sIBjSEem9KsT0bU94gw _sp5TMBjSEem9KsT0bU94gw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sp4FEBjSEem9KsT0bU94gw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sp4FERjSEem9KsT0bU94gw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_sp5TMBjSEem9KsT0bU94gw" name="cliente" type="_Ag5vUBjSEem9KsT0bU94gw" association="_sp3eABjSEem9KsT0bU94gw"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_sp4sIBjSEem9KsT0bU94gw" name="pedido" type="_DxtYwBjSEem9KsT0bU94gw" association="_sp3eABjSEem9KsT0bU94gw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__Q0VkBjTEem9KsT0bU94gw" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_v3LHgBjSEem9KsT0bU94gw" name="atendido por" memberEnd="_v3MVoBjSEem9KsT0bU94gw _v3NjwBjSEem9KsT0bU94gw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_v3LHgRjSEem9KsT0bU94gw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_v3LHghjSEem9KsT0bU94gw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_v3MVoBjSEem9KsT0bU94gw" name="vendedor" type="_EBXlYBjSEem9KsT0bU94gw" association="_v3LHgBjSEem9KsT0bU94gw"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_v3NjwBjSEem9KsT0bU94gw" name="cliente corporativo" type="_B8GiABjSEem9KsT0bU94gw" association="_v3LHgBjSEem9KsT0bU94gw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dTuvkBjUEem9KsT0bU94gw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dT5usBjUEem9KsT0bU94gw" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_wrJiIBjSEem9KsT0bU94gw" name="usa como medio de pago 2" memberEnd="_wrKwQBjSEem9KsT0bU94gw _wrKwQRjSEem9KsT0bU94gw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wrJiIRjSEem9KsT0bU94gw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wrKJMBjSEem9KsT0bU94gw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_wrKwQBjSEem9KsT0bU94gw" name="contrato" type="_BqnJYBjSEem9KsT0bU94gw" association="_wrJiIBjSEem9KsT0bU94gw"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_wrKwQRjSEem9KsT0bU94gw" name="cliente corporativo" type="_B8GiABjSEem9KsT0bU94gw" association="_wrJiIBjSEem9KsT0bU94gw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_xpn8kBjSEem9KsT0bU94gw" name="usa como medio de pago" memberEnd="_xpojoRjSEem9KsT0bU94gw _xppKsBjSEem9KsT0bU94gw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xpn8kRjSEem9KsT0bU94gw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xpojoBjSEem9KsT0bU94gw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_xpojoRjSEem9KsT0bU94gw" name="targeta crédito" type="_ERSQsBjSEem9KsT0bU94gw" association="_xpn8kBjSEem9KsT0bU94gw"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_xppKsBjSEem9KsT0bU94gw" name="cliente personal" type="_CnoLQBjSEem9KsT0bU94gw" association="_xpn8kBjSEem9KsT0bU94gw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_78Yl0BjSEem9KsT0bU94gw" name="consta de" memberEnd="_78Zz8BjSEem9KsT0bU94gw _78Zz8xjSEem9KsT0bU94gw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_78ZM4BjSEem9KsT0bU94gw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_78ZM4RjSEem9KsT0bU94gw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_78Zz8xjSEem9KsT0bU94gw" name="pedido" type="_DxtYwBjSEem9KsT0bU94gw" association="_78Yl0BjSEem9KsT0bU94gw"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_78Zz8BjSEem9KsT0bU94gw" name="linea pedido" type="_BHvF0BjSEem9KsT0bU94gw" aggregation="composite" association="_78Yl0BjSEem9KsT0bU94gw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_78Zz8RjSEem9KsT0bU94gw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_78Zz8hjSEem9KsT0bU94gw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_9KGWIBjSEem9KsT0bU94gw" name="formado por" memberEnd="_9KKnkBjSEem9KsT0bU94gw _9KOR8BjSEem9KsT0bU94gw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9KKAgBjSEem9KsT0bU94gw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9KKAgRjSEem9KsT0bU94gw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_9KOR8BjSEem9KsT0bU94gw" name="linea pedido" type="_BHvF0BjSEem9KsT0bU94gw" association="_9KGWIBjSEem9KsT0bU94gw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S3Ni0BjTEem9KsT0bU94gw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S3P_EBjTEem9KsT0bU94gw" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_9KKnkBjSEem9KsT0bU94gw" name="producto" type="_BUNbkBjSEem9KsT0bU94gw" aggregation="shared" association="_9KGWIBjSEem9KsT0bU94gw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9KMcwBjSEem9KsT0bU94gw" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_VZTPoBjUEem9KsT0bU94gw" client="_EBXlYBjSEem9KsT0bU94gw" supplier="_EpbD4BjSEem9KsT0bU94gw"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_uVmzICihEem3uuz8v_wRpg" name="dani"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_5lEN0CikEem3uuz8v_wRpg" name="vendes">
+      <packagedElement xmi:type="uml:Package" xmi:id="_5mTj8CikEem3uuz8v_wRpg" name="vendes">
+        <packagedElement xmi:type="uml:Class" xmi:id="_5mZDgCikEem3uuz8v_wRpg" name="Vendedor" visibility="public">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5rdJsCikEem3uuz8v_wRpg" name="nom" visibility="private" type="_5mfKIiikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5rkecCikEem3uuz8v_wRpg" name="cognoms" visibility="private" type="_5mfKIiikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5rlskCikEem3uuz8v_wRpg" name="idVenedor" visibility="private" type="_5mfKIiikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5rwEoCikEem3uuz8v_wRpg" name="getNom" specification="_5rlskSikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return nom;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5sCYgCikEem3uuz8v_wRpg" name="setNom" specification="_5rzvACikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.nom = nom;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5sENsCikEem3uuz8v_wRpg" name="getCognoms" specification="_5sC_kCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return cognoms;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5sE0wSikEem3uuz8v_wRpg" name="setCognoms" specification="_5sENsSikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.cognoms = cognoms;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5sFb0SikEem3uuz8v_wRpg" name="getIdVenedor" specification="_5sE0wiikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return idVenedor;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5sJtQCikEem3uuz8v_wRpg" name="setIdVenedor" specification="_5sFb0iikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.idVenedor = idVenedor;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5rlskSikEem3uuz8v_wRpg" name="getNom" visibility="public" method="_5rwEoCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5rmToCikEem3uuz8v_wRpg" type="_5mfKIiikEem3uuz8v_wRpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5rzvACikEem3uuz8v_wRpg" name="setNom" visibility="public" method="_5sCYgCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5r7q0CikEem3uuz8v_wRpg" name="nom" type="_5mfKIiikEem3uuz8v_wRpg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5sC_kCikEem3uuz8v_wRpg" name="getCognoms" visibility="public" method="_5sENsCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5sDmoCikEem3uuz8v_wRpg" type="_5mfKIiikEem3uuz8v_wRpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5sENsSikEem3uuz8v_wRpg" name="setCognoms" visibility="public" method="_5sE0wSikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5sE0wCikEem3uuz8v_wRpg" name="cognoms" type="_5mfKIiikEem3uuz8v_wRpg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5sE0wiikEem3uuz8v_wRpg" name="getIdVenedor" visibility="public" method="_5sFb0SikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5sFb0CikEem3uuz8v_wRpg" type="_5mfKIiikEem3uuz8v_wRpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5sFb0iikEem3uuz8v_wRpg" name="setIdVenedor" visibility="public" method="_5sJtQCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5sJGMCikEem3uuz8v_wRpg" name="idVenedor" type="_5mfKIiikEem3uuz8v_wRpg"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5sLicCikEem3uuz8v_wRpg" name="ClientePersonal" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_5sMJgCikEem3uuz8v_wRpg" general="_5sLicSikEem3uuz8v_wRpg"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5sNXoCikEem3uuz8v_wRpg" name="idcliPer" visibility="private" type="_5mfKIiikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5sTeQCikEem3uuz8v_wRpg" name="getIdcliPer" specification="_5sPz4CikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return idcliPer;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5sV6gCikEem3uuz8v_wRpg" name="setIdcliPer" specification="_5sUsYCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.idcliPer = idcliPer;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5sPz4CikEem3uuz8v_wRpg" name="getIdcliPer" visibility="public" method="_5sTeQCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5sS3MCikEem3uuz8v_wRpg" type="_5mfKIiikEem3uuz8v_wRpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5sUsYCikEem3uuz8v_wRpg" name="setIdcliPer" visibility="public" method="_5sV6gCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5sVTcCikEem3uuz8v_wRpg" name="idcliPer" type="_5mfKIiikEem3uuz8v_wRpg"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5sLicSikEem3uuz8v_wRpg" name="Cliente" visibility="public">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5uJRUCikEem3uuz8v_wRpg" name="llistaPedidos" visibility="private" type="_5uDKsCikEem3uuz8v_wRpg" isUnique="false">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5uJRUSikEem3uuz8v_wRpg"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5uJ4YCikEem3uuz8v_wRpg" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5uPX8CikEem3uuz8v_wRpg" name="idClient" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5uP_ACikEem3uuz8v_wRpg" name="nom" visibility="private" type="_5mfKIiikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5uP_ASikEem3uuz8v_wRpg" name="cognoms" visibility="private" type="_5mfKIiikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5uQmEyikEem3uuz8v_wRpg" name="getLlistaPedidos" specification="_5uP_AiikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return llistaPedidos;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5uRNIyikEem3uuz8v_wRpg" name="setLlistaPedidos" specification="_5uQmFCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.llistaPedidos = llistaPedidos;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5uR0MSikEem3uuz8v_wRpg" name="getIdClient" specification="_5uRNJCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return idClient;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5uR0NCikEem3uuz8v_wRpg" name="setIdClient" specification="_5uR0MiikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.idClient = idClient;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5uSbQiikEem3uuz8v_wRpg" name="getNom" specification="_5uSbQCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return nom;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5uTCUSikEem3uuz8v_wRpg" name="setNom" specification="_5uSbQyikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.nom = nom;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5uUQcCikEem3uuz8v_wRpg" name="getCognoms" specification="_5uTpYCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return cognoms;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5ublMCikEem3uuz8v_wRpg" name="setCognoms" specification="_5uUQcSikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.cognoms = cognoms;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5uP_AiikEem3uuz8v_wRpg" name="getLlistaPedidos" visibility="public" method="_5uQmEyikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5uQmECikEem3uuz8v_wRpg" type="_5uDKsCikEem3uuz8v_wRpg" direction="return">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5uQmESikEem3uuz8v_wRpg"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5uQmEiikEem3uuz8v_wRpg" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5uQmFCikEem3uuz8v_wRpg" name="setLlistaPedidos" visibility="public" method="_5uRNIyikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5uRNICikEem3uuz8v_wRpg" name="llistaPedidos" type="_5uDKsCikEem3uuz8v_wRpg">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5uRNISikEem3uuz8v_wRpg"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5uRNIiikEem3uuz8v_wRpg" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5uRNJCikEem3uuz8v_wRpg" name="getIdClient" visibility="public" method="_5uR0MSikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5uR0MCikEem3uuz8v_wRpg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5uR0MiikEem3uuz8v_wRpg" name="setIdClient" visibility="public" method="_5uR0NCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5uR0MyikEem3uuz8v_wRpg" name="idClient">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5uSbQCikEem3uuz8v_wRpg" name="getNom" visibility="public" method="_5uSbQiikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5uSbQSikEem3uuz8v_wRpg" type="_5mfKIiikEem3uuz8v_wRpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5uSbQyikEem3uuz8v_wRpg" name="setNom" visibility="public" method="_5uTCUSikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5uTCUCikEem3uuz8v_wRpg" name="nom" type="_5mfKIiikEem3uuz8v_wRpg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5uTpYCikEem3uuz8v_wRpg" name="getCognoms" visibility="public" method="_5uUQcCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5uTpYSikEem3uuz8v_wRpg" type="_5mfKIiikEem3uuz8v_wRpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5uUQcSikEem3uuz8v_wRpg" name="setCognoms" visibility="public" method="_5ublMCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5uZI8CikEem3uuz8v_wRpg" name="cognoms" type="_5mfKIiikEem3uuz8v_wRpg"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5sXvsCikEem3uuz8v_wRpg" name="ClienteCorporativo" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_5sXvsSikEem3uuz8v_wRpg" general="_5sLicSikEem3uuz8v_wRpg"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5sY90CikEem3uuz8v_wRpg" name="idCliCorp" visibility="private" type="_5mfKIiikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5sazACikEem3uuz8v_wRpg" name="getIdCliCorp" specification="_5sZk4CikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return idCliCorp;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5sdPQCikEem3uuz8v_wRpg" name="setIdCliCorp" specification="_5scBICikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.idCliCorp = idCliCorp;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5sZk4CikEem3uuz8v_wRpg" name="getIdCliCorp" visibility="public" method="_5sazACikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5saL8CikEem3uuz8v_wRpg" type="_5mfKIiikEem3uuz8v_wRpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5scBICikEem3uuz8v_wRpg" name="setIdCliCorp" visibility="public" method="_5sdPQCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5scoMCikEem3uuz8v_wRpg" name="idCliCorp" type="_5mfKIiikEem3uuz8v_wRpg"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5sfrgCikEem3uuz8v_wRpg" name="Producto" visibility="public">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5tE6UCikEem3uuz8v_wRpg" name="idProducte" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5tM2ICikEem3uuz8v_wRpg" name="nom" visibility="private" type="_5mfKIiikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5tTj0CikEem3uuz8v_wRpg" name="preu" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5tei8CikEem3uuz8v_wRpg" name="getIdProducte" specification="_5taRgCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return idProducte;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5tfKACikEem3uuz8v_wRpg" name="setIdProducte" specification="_5tei8SikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.idProducte = idProducte;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5tjbcSikEem3uuz8v_wRpg" name="getNom" specification="_5ti0YCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return nom;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5tkpkCikEem3uuz8v_wRpg" name="setNom" specification="_5tjbciikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.nom = nom;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5tpiECikEem3uuz8v_wRpg" name="getPreu" specification="_5tl3sCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return preu;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5txd4CikEem3uuz8v_wRpg" name="setPreu" specification="_5tslYCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.preu = preu;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5taRgCikEem3uuz8v_wRpg" name="getIdProducte" visibility="public" method="_5tei8CikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5tcGsCikEem3uuz8v_wRpg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5tei8SikEem3uuz8v_wRpg" name="setIdProducte" visibility="public" method="_5tfKACikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5tei8iikEem3uuz8v_wRpg" name="idProducte">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5ti0YCikEem3uuz8v_wRpg" name="getNom" visibility="public" method="_5tjbcSikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5tjbcCikEem3uuz8v_wRpg" type="_5mfKIiikEem3uuz8v_wRpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5tjbciikEem3uuz8v_wRpg" name="setNom" visibility="public" method="_5tkpkCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5tjbcyikEem3uuz8v_wRpg" name="nom" type="_5mfKIiikEem3uuz8v_wRpg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5tl3sCikEem3uuz8v_wRpg" name="getPreu" visibility="public" method="_5tpiECikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5toT8CikEem3uuz8v_wRpg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5tslYCikEem3uuz8v_wRpg" name="setPreu" visibility="public" method="_5txd4CikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5tw20CikEem3uuz8v_wRpg" name="preu">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5tz6ICikEem3uuz8v_wRpg" name="SistemaPago" visibility="public">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5t0hMCikEem3uuz8v_wRpg" name="pedido" visibility="public" type="_5mfKIiikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5t0hMSikEem3uuz8v_wRpg" name="preu" visibility="public" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5t-SMCikEem3uuz8v_wRpg" name="consultarSaldo" specification="_5t6n0CikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return 2.3f;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5t6n0CikEem3uuz8v_wRpg" name="consultarSaldo" visibility="public" method="_5t-SMCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5t8dACikEem3uuz8v_wRpg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5uDKsCikEem3uuz8v_wRpg" name="Pedidos" visibility="public">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5vvMwCikEem3uuz8v_wRpg" name="liniaPedido" visibility="private" type="_5vFFcCikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5v1TYCikEem3uuz8v_wRpg" name="idPedido" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5v6y8CikEem3uuz8v_wRpg" name="getLiniaPedido" specification="_5v16cCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return liniaPedido;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5v_rcCikEem3uuz8v_wRpg" name="setLiniaPedido" specification="_5v7aACikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.liniaPedido = liniaPedido;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5wA5kCikEem3uuz8v_wRpg" name="getIdPedido" specification="_5wASgCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return idPedido;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5wBgoSikEem3uuz8v_wRpg" name="setIdPedido" specification="_5wA5kSikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.idPedido = idPedido;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5v16cCikEem3uuz8v_wRpg" name="getLiniaPedido" visibility="public" method="_5v6y8CikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5v2hgCikEem3uuz8v_wRpg" type="_5vFFcCikEem3uuz8v_wRpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5v7aACikEem3uuz8v_wRpg" name="setLiniaPedido" visibility="public" method="_5v_rcCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5v7aASikEem3uuz8v_wRpg" name="liniaPedido" type="_5vFFcCikEem3uuz8v_wRpg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5wASgCikEem3uuz8v_wRpg" name="getIdPedido" visibility="public" method="_5wA5kCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5wASgSikEem3uuz8v_wRpg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5wA5kSikEem3uuz8v_wRpg" name="setIdPedido" visibility="public" method="_5wBgoSikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5wBgoCikEem3uuz8v_wRpg" name="idPedido">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5uczUCikEem3uuz8v_wRpg" name="Contrato" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_5udaYCikEem3uuz8v_wRpg" general="_5tz6ICikEem3uuz8v_wRpg"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5ueBcCikEem3uuz8v_wRpg" name="lineaCredito" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5ueogCikEem3uuz8v_wRpg" name="nom" visibility="private" type="_5mfKIiikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5uf2oCikEem3uuz8v_wRpg" name="cognoms" visibility="private" type="_5mfKIiikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5uoZgCikEem3uuz8v_wRpg" name="idPersona" visibility="private" type="_5mfKIiikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5upAkiikEem3uuz8v_wRpg" name="getLineaCredito" specification="_5upAkCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return lineaCredito;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5usD4CikEem3uuz8v_wRpg" name="setLineaCredito" specification="_5uqOsCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.lineaCredito = lineaCredito;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5uxjcCikEem3uuz8v_wRpg" name="getNom" specification="_5ut5ECikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return nom;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5u3DASikEem3uuz8v_wRpg" name="setNom" specification="_5u2b8CikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.nom = nom;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5u3qEiikEem3uuz8v_wRpg" name="getCognoms" specification="_5u3qECikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return cognoms;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5u6GUCikEem3uuz8v_wRpg" name="setCognoms" specification="_5u4RICikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.cognoms = cognoms;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5u6tYCikEem3uuz8v_wRpg" name="getIdPersona" specification="_5u6GUSikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return idPersona;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5u9JoCikEem3uuz8v_wRpg" name="setIdPersona" specification="_5u77gCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.idPersona = idPersona;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5upAkCikEem3uuz8v_wRpg" name="getLineaCredito" visibility="public" method="_5upAkiikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5upAkSikEem3uuz8v_wRpg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5uqOsCikEem3uuz8v_wRpg" name="setLineaCredito" visibility="public" method="_5usD4CikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5uq1wCikEem3uuz8v_wRpg" name="lineaCredito">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5ut5ECikEem3uuz8v_wRpg" name="getNom" visibility="public" method="_5uxjcCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5uwVUCikEem3uuz8v_wRpg" type="_5mfKIiikEem3uuz8v_wRpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5u2b8CikEem3uuz8v_wRpg" name="setNom" visibility="public" method="_5u3DASikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5u3DACikEem3uuz8v_wRpg" name="nom" type="_5mfKIiikEem3uuz8v_wRpg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5u3qECikEem3uuz8v_wRpg" name="getCognoms" visibility="public" method="_5u3qEiikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5u3qESikEem3uuz8v_wRpg" type="_5mfKIiikEem3uuz8v_wRpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5u4RICikEem3uuz8v_wRpg" name="setCognoms" visibility="public" method="_5u6GUCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5u4RISikEem3uuz8v_wRpg" name="cognoms" type="_5mfKIiikEem3uuz8v_wRpg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5u6GUSikEem3uuz8v_wRpg" name="getIdPersona" visibility="public" method="_5u6tYCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5u6GUiikEem3uuz8v_wRpg" type="_5mfKIiikEem3uuz8v_wRpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5u77gCikEem3uuz8v_wRpg" name="setIdPersona" visibility="public" method="_5u9JoCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5u8ikCikEem3uuz8v_wRpg" name="idPersona" type="_5mfKIiikEem3uuz8v_wRpg"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5vFFcCikEem3uuz8v_wRpg" name="LiniaPedido" visibility="public">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5vIIwCikEem3uuz8v_wRpg" name="idLiniaPedido" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5vMaMCikEem3uuz8v_wRpg" name="preu" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5vO2cCikEem3uuz8v_wRpg" name="Llista" visibility="private" type="_5sfrgCikEem3uuz8v_wRpg" isUnique="false">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5vQEkCikEem3uuz8v_wRpg"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vRSsCikEem3uuz8v_wRpg" value="*"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5vUWACikEem3uuz8v_wRpg" name="getIdLiniaPedido" specification="_5vSg0CikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return idLiniaPedido;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5vYncCikEem3uuz8v_wRpg" name="setIdLiniaPedido" specification="_5vWLMCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.idLiniaPedido = idLiniaPedido;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5vdf8CikEem3uuz8v_wRpg" name="getPreu" specification="_5vbDsCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return preu;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5vnQ8CikEem3uuz8v_wRpg" name="setPreu" specification="_5vf8MCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.preu = preu;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5vofESikEem3uuz8v_wRpg" name="getLlista" specification="_5vn4ACikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return Llista;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5vqUQiikEem3uuz8v_wRpg" name="setLlista" specification="_5vpGICikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    Llista = llista;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5vSg0CikEem3uuz8v_wRpg" name="getIdLiniaPedido" visibility="public" method="_5vUWACikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5vTu8CikEem3uuz8v_wRpg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5vWLMCikEem3uuz8v_wRpg" name="setIdLiniaPedido" visibility="public" method="_5vYncCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5vXZUCikEem3uuz8v_wRpg" name="idLiniaPedido">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5vbDsCikEem3uuz8v_wRpg" name="getPreu" visibility="public" method="_5vdf8CikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5vbqwCikEem3uuz8v_wRpg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5vf8MCikEem3uuz8v_wRpg" name="setPreu" visibility="public" method="_5vnQ8CikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5vhKUCikEem3uuz8v_wRpg" name="preu">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5vn4ACikEem3uuz8v_wRpg" name="getLlista" visibility="public" method="_5vofESikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5vn4ASikEem3uuz8v_wRpg" type="_5sfrgCikEem3uuz8v_wRpg" direction="return">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5vn4AiikEem3uuz8v_wRpg"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vofECikEem3uuz8v_wRpg" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5vpGICikEem3uuz8v_wRpg" name="setLlista" visibility="public" method="_5vqUQiikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5vptMCikEem3uuz8v_wRpg" name="llista" type="_5sfrgCikEem3uuz8v_wRpg">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5vqUQCikEem3uuz8v_wRpg"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vqUQSikEem3uuz8v_wRpg" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5wGZICikEem3uuz8v_wRpg" name="TarjetaCredito" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_5wHAMCikEem3uuz8v_wRpg" general="_5tz6ICikEem3uuz8v_wRpg"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5wHnQCikEem3uuz8v_wRpg" name="idUsuari" visibility="private" type="_5mfKIiikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5wI1YCikEem3uuz8v_wRpg" name="nom" visibility="private" type="_5mfKIiikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5wJccCikEem3uuz8v_wRpg" name="cognoms" visibility="private" type="_5mfKIiikEem3uuz8v_wRpg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_5wNt4CikEem3uuz8v_wRpg" name="saldo" visibility="private" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5wO8ASikEem3uuz8v_wRpg" name="getIdUsuari" specification="_5wOU8CikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return idUsuari;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5wQxMCikEem3uuz8v_wRpg" name="setIdUsuari" specification="_5wPjECikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.idUsuari = idUsuari;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5wR_UCikEem3uuz8v_wRpg" name="getNom" specification="_5wRYQCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return nom;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5wTNcSikEem3uuz8v_wRpg" name="setNom" specification="_5wSmYCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.nom = nom;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5wT0giikEem3uuz8v_wRpg" name="getCognoms" specification="_5wT0gCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return cognoms;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5waiMCikEem3uuz8v_wRpg" name="setCognoms" specification="_5wT0gyikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.cognoms = cognoms;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5wbwUCikEem3uuz8v_wRpg" name="getSaldo" specification="_5wbJQCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    return saldo;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5wgo0CikEem3uuz8v_wRpg" name="setSaldo" specification="_5wcXYCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+    this.saldo = saldo;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5wqZ0CikEem3uuz8v_wRpg" name="pagar" specification="_5wgo0SikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_5w2nECikEem3uuz8v_wRpg" name="ingressar" specification="_5wzjwCikEem3uuz8v_wRpg">
+            <language>JAVA</language>
+            <body>
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5wOU8CikEem3uuz8v_wRpg" name="getIdUsuari" visibility="public" method="_5wO8ASikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5wO8ACikEem3uuz8v_wRpg" type="_5mfKIiikEem3uuz8v_wRpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5wPjECikEem3uuz8v_wRpg" name="setIdUsuari" visibility="public" method="_5wQxMCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5wQKICikEem3uuz8v_wRpg" name="idUsuari" type="_5mfKIiikEem3uuz8v_wRpg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5wRYQCikEem3uuz8v_wRpg" name="getNom" visibility="public" method="_5wR_UCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5wRYQSikEem3uuz8v_wRpg" type="_5mfKIiikEem3uuz8v_wRpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5wSmYCikEem3uuz8v_wRpg" name="setNom" visibility="public" method="_5wTNcSikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5wTNcCikEem3uuz8v_wRpg" name="nom" type="_5mfKIiikEem3uuz8v_wRpg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5wT0gCikEem3uuz8v_wRpg" name="getCognoms" visibility="public" method="_5wT0giikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5wT0gSikEem3uuz8v_wRpg" type="_5mfKIiikEem3uuz8v_wRpg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5wT0gyikEem3uuz8v_wRpg" name="setCognoms" visibility="public" method="_5waiMCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5wUbkCikEem3uuz8v_wRpg" name="cognoms" type="_5mfKIiikEem3uuz8v_wRpg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5wbJQCikEem3uuz8v_wRpg" name="getSaldo" visibility="public" method="_5wbwUCikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5wbJQSikEem3uuz8v_wRpg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5wcXYCikEem3uuz8v_wRpg" name="setSaldo" visibility="public" method="_5wgo0CikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5wgBwCikEem3uuz8v_wRpg" name="saldo">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5wgo0SikEem3uuz8v_wRpg" name="pagar" visibility="public" method="_5wqZ0CikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5wkTMCikEem3uuz8v_wRpg" name="saldo">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_5wzjwCikEem3uuz8v_wRpg" name="ingressar" visibility="public" method="_5w2nECikEem3uuz8v_wRpg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5w0K0CikEem3uuz8v_wRpg" name="saldo">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7W3wkBydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_5mejECikEem3uuz8v_wRpg" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_5mfKICikEem3uuz8v_wRpg" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_5mfKISikEem3uuz8v_wRpg" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_5mfKIiikEem3uuz8v_wRpg" name="String"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_uWztACihEem3uuz8v_wRpg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uW5zoCihEem3uuz8v_wRpg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_uXtE4CihEem3uuz8v_wRpg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uXvhICihEem3uuz8v_wRpg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_uXxWUCihEem3uuz8v_wRpg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uXxWUSihEem3uuz8v_wRpg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <PapyrusJava:External xmi:id="_5rYRMCikEem3uuz8v_wRpg" name="java.lang.String" base_Classifier="_5mfKIiikEem3uuz8v_wRpg"/>
+</xmi:XMI>
