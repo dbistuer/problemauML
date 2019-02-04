@@ -1,12 +1,12 @@
 **1 - Modelitzar el problema.**
 
-> Un client pot realitzar diverses comandes en un període de temps (una comanda es realitza per un sol client).
+> Un client pot realitzar diverses *comandes* en un període de temps (una comanda es realitza per un sol client).
 >
-> Cada comanda està format per vaires línies de productes, en la qual aquesta forma per un sol producte.
+> Cada comanda està format per vaires *línies de productes*, en la qual aquesta forma per un sol *producte*.
 >
-> Pel que fa a referència al client hi ha de dos tipus, el client personal i el client corporatiu. La diferencia aquesta marcada en la forma de pago, el client personal ho farà a través d'una targeta de crèdit i el client corporatiu o a través d'un contracte amb l'empresa i un límit de crèdit.
+> Pel que fa a referència a dos tipus de *clients*, el *client personal* i el *client corporatiu*. La diferencia aquesta marcada en la forma de pago, el client personal ho farà a través d'una *targeta de crèdit* i el client corporatiu o a través d'un *contracte amb l'empresa* i un límit de crèdit.
 >
-> El venedor de l'empresa s'encarregui d'atendre les peticions dels clients corporatius, de forma que cada venedor es fa càrregues d'una sola cartera de clients corporatius i cada client sol li atendrà un sol venedor.
+> El *venedor* de l'empresa s'encarregui d'atendre les peticions dels clients corporatius, de forma que cada venedor es fa càrregues d'una sola cartera de clients corporatius i cada client sol li atendrà un sol venedor.
 
 **2 - Fer el diagrama de classes amb Eclipse Papyrus.**
 
