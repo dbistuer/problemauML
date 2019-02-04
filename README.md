@@ -12,7 +12,7 @@
 
 > Aqui et mostro el diagrama de lasses creat amb el Papyrus:
 
-![papyrus](/home/dani/Escritorio/uml/papyrus/papyrus.png)
+![papyrus](papyrus/papyrus.png)
 
 > Un cop ja tenim el diagrama fet cliquem amb el boto dret damun d'aquest i sel·leccionem "Designer" i "Generate code"
 >
@@ -24,6 +24,6 @@
 
 > Aqui et mostro el diagrama de lasses creat amb el Papyrus:
 
-![paradygm](/home/dani/Escritorio/uml/paradygm/paradygm.png)
+![paradygm](paradygm/paradygm.png)
 
 > Un cop tinc el diagama generat, a la barra superior al menu sel·lecciono "tools", "Code", "instant generator", es sel·lecciona el llaenguatge "Java" i se li dona un path de sortida i "generate".
